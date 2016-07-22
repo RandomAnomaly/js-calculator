@@ -13,6 +13,7 @@ var calculator = (function(){
 	returnObject.pressButton = function(value){
 		if(typeof value === 'number' && entry.length < maxLength){
 			entry.push(value);
+			updateDisplay();
 		} else{
 			// check for operator
 			if(OPERATOR_REGEX.test(value)){
@@ -21,6 +22,7 @@ var calculator = (function(){
 					operandA = entry.join('');
 					entry = [];
 					operator = value;
+					updateDisplay();
 				}
 				// previous value is present
 				else{
@@ -28,25 +30,29 @@ var calculator = (function(){
 					entry = [];
 					operator = value;
 					updateDisplay();
+					
 				}
 			} else if(value == "AC"){
 				//clear everything
 				entry = [];
 				operandA = null;
 				operator = null;
+				updateDisplay();
 			} else if(value == "CE"){
 				// clear current entry
 				entry = [];
+				updateDisplay();
 			} else {
 				//equals
 				updateDisplay(calculate());
 				entry = [];
 				operandA = null;
 				operator = null;
+				
 			}
 
 		}
-		updateDisplay();
+		
 	};
 
 
@@ -78,7 +84,7 @@ var calculator = (function(){
 			}		
 		}
 		else {
-			setDisplay(vale);
+			setDisplay(value);
 		}
 	}
 
