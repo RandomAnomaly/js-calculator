@@ -13,7 +13,6 @@ var calculator = (function(){
 	returnObject.pressButton = function(value){
 		if(typeof value === 'number' && entry.length < maxLength){
 			entry.push(value);
-			console.log(entry.join(''));
 		} else{
 			// check for operator
 			if(OPERATOR_REGEX.test(value)){
@@ -32,6 +31,15 @@ var calculator = (function(){
 				}
 			} else if(value == "AC"){
 				//clear everything
+				entry = [];
+				operandA = null;
+				operator = null;
+			} else if(value == "CE"){
+				// clear current entry
+				entry = [];
+			} else {
+				//equals
+				updateDisplay(calculate());
 				entry = [];
 				operandA = null;
 				operator = null;
