@@ -1,8 +1,12 @@
 @CHARSET "ISO-8859-1";
 
+@font-face {
+	font-family: 'digital-7';	
+	src: url(digital-7.ttf);
+}
 
 /**
-CSS taken from:
+.row-eq-height CSS taken from:
 http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css
 Gives columns in a row equal height. For handling that = button
 */
@@ -13,3 +17,32 @@ Gives columns in a row equal height. For handling that = button
   display:         flex;
 }
 
+.jumbotron {
+	font-family: "digital-7";
+	font-size: 400%;
+	text-align: right;
+	text-shadow: 4px 4px rgb(220,220,220);
+}
+
+.calculator-button {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: rgb(233,76,111);
+}
+
+.calculator-button:hover {
+	background-color: rgb(198,213,205);
+}
+
+.calculator-button,
+.calculator-button:hover {
+	border:none;
+}
+
+#outer-calc {
+	background-color: rgb(84,39,51);
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px
+}
