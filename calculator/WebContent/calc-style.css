@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+
+/**
+CSS taken from:
+http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css
+Gives columns in a row equal height. For handling that = button
+*/
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 
+<!-- Link to the js that does the work -->
 <script src="calculator.js"></script>
+<!--  -->
 
 <!--  Adding bootstrap from CDN -->
 <!-- Latest compiled and minified CSS -->
@@ -15,12 +17,121 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!--  -->
 
+<!-- Styling -->
+<link rel="stylesheet" href="calc-style.css">
+<!-- -->
+
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<button id="test-button" class="btn btn-block btn-primary" onClick="testFunction();">click</button>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4 col-lg-push-4">
+
+				<!-- Calculator Screen -->
+				<div class="row">
+					<div id="calc-display" class="jumbotron">Display</div>
+				</div>
+
+				<!-- Calculator Buttons -->
+				<div class="row">
+					<div class="col-xs-10 col-xs-push-1">
+						<!-- Row 1: AC, CE, /, * -->
+						<div class="row">
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton('AC');">AC</button>
+							</div>
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton('CE');">CE</button>
+							</div>
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton('/');">/</button>
+							</div>
+							<div class="col-xs-3" onClick="calculator.pressButton('*');">
+								<button class="btn btn-block btn-primary">*</button>
+							</div>
+						</div>
+
+						<!-- Row 2: 7, 8, 9, - -->
+						<div class="row">
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton(7);">7</button>
+							</div>
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton(8);">8</button>
+							</div>
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton(9);">9</button>
+							</div>
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton('-');">-</button>
+							</div>
+						</div>
+
+						<!-- Row 3: 4, 5, 6, + -->
+						<div class="row">
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton(4);">4</button>
+							</div>
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton(5);">5</button>
+							</div>
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton(6);">6</button>
+							</div>
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" onClick="calculator.pressButton('+');">+</button>
+							</div>
+						</div>
+
+
+						<!-- wrapper row -->
+						<div class="row row-eq-height">
+							<!-- Col for most of the buttons -->
+							<div class="col-xs-9">
+								<!-- Row 4: 1,2,3 -->
+								<div class="row">
+									<div class="col-xs-4">
+										<button class="btn btn-block btn-primary" onClick="calculator.pressButton(1);">1</button>
+									</div>
+									<div class="col-xs-4">
+										<button class="btn btn-block btn-primary" onClick="calculator.pressButton(2);">2</button>
+									</div>
+									<div class="col-xs-4">
+										<button class="btn btn-block btn-primary" onClick="calculator.pressButton(3);">3</button>
+									</div>
+								</div>
+								<!-- Row 5: 0 (double length), . -->
+								<div class="row">
+									<div class="col-xs-8">
+										<button class="btn btn-block btn-primary" onClick="calculator.pressButton(0);">0</button>
+									</div>
+									<div class="col-xs-4">
+										<button class="btn btn-block btn-primary" onClick="calculator.pressButton('.');">.</button>
+									</div>
+								</div>
+								
+							</div>
+
+							<!-- col for the equals button -->
+							<div class="col-xs-3">
+								<button class="btn btn-block btn-primary" style="height:100%">=</button>
+							</div>
+
+						</div>
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
 </body>
 
 </html>
