@@ -53,6 +53,5 @@ Gives columns in a row equal height. For handling that = button
 }
 
 .button-column{
-	padding-left: 0px;
-	padding-right: 0px;
+	padding: 2px;
 }
